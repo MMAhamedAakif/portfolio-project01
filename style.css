@@ -92,13 +92,13 @@ image {
     width: 45%;
     height: 70%;
     position: absolute;
-    bottom: 15%;
+    bottom: 10%;
     right: 100px;
 }
 
 .images img {
 
-    height: 500px;
+    height: 600px;
     width: 500px;
     left: 50%;
     bottom: 0%;

@@ -17,13 +17,15 @@ img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
+    left: 5%;
 }
 
 nav {
     position: fixed;
     display: flex;
-    width: 90%;
-    margin: auto;
+    width: 95%;
+    /* margin: auto; */
+    gap: 2rem;
     padding: 20px ;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +33,6 @@ nav {
 }
 nav img{
     position:relative;
-    /* left: 24px; */
 }
 nav ul li {
     display: inline-block;
@@ -40,14 +41,39 @@ nav ul li {
 }
 
 nav ul li a {
+    position: relative;
     text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    font-size: 1.05rem;
+    transition: 0.3;
 }
 
 nav ul li a:hover {
-    color: red;
+    color: #38bdf8;
+    text-shadow: 0 0 10px  #38bdf8;
+}
+
+.btn {
+    display: flex;
+}
+
+.buttons{
+    padding: 0.5rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #38bdf8;
+    color: black;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons:hover{
+    background: #0aa9f3;
+    box-shadow: 0 0 15px #0aa9f3 ;
 }
 
 
@@ -86,15 +112,69 @@ span {
     font-size: 18px;
 }
 
-.detel a {
-    background: #0051ff;
-    padding: 10px 25px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin: auto 0;
+
+/* for button */
+ .tag-box{
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background:linear-gradient(to left ,  #E0F2FF, 
+  #90CAF9, 
+  #42A5F5, 
+  #1E88E5, 
+  #1565C0, 
+  #0D47A1);
+    background-size: 200%;
+    animation: animationGradient 2s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
+
+@keyframes animationGradient {
+    to {
+        background-position: 200% ;
+    }
+    
+}
+
+ .tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.05s ease;
+    cursor: pointer;
+}
+
+
+
+.tag-box .tag:hover{
+    color:#0aa9f3;
+}
+
+.tag-box .tag a {
+    color: black;
+}
+
+.tag-box .tag a:link {
+  color: #1E88E5; /* normal link (blue) */
+}
+
+.tag-box .tag a:visited {
+  color: bal; /* visited link (purple) */
+}
+
+.tag-box .tag a:hover {
+  color: #E53935; /* hover (red) */
+}
+
+.tag-box .tag a:active {
+  color: #43A047; /* active/clicking (green) */
+}
+
 
 image {
     width: 45%;

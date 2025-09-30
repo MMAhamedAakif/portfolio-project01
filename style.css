@@ -6,6 +6,7 @@
 
 .hero {
 
+    display: flex;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -19,14 +20,19 @@ img {
 }
 
 nav {
+    position: fixed;
     display: flex;
-    width: 95%;
+    width: 90%;
     margin: auto;
-    padding: 20px 0;
+    padding: 20px ;
     align-items: center;
     justify-content: space-between;
+    z-index: 5;
 }
-
+nav img{
+    position:relative;
+    /* left: 24px; */
+}
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -44,8 +50,18 @@ nav ul li a:hover {
     color: red;
 }
 
+
+.hero-content{
+    display: flex;
+    flex-basis: 50%;
+    flex-grow: 1;
+}
 .detel {
     position: absolute;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-around;
+    flex-direction: row;
     top: 45%;
     left: 7%;
 
@@ -53,6 +69,7 @@ nav ul li a:hover {
 
 .detel h1 {
     font-size: 50px;
+    flex-basis: 50%;
     color: #212121;
     margin-bottom: 20px;
     font-weight: bold;
@@ -89,6 +106,8 @@ image {
 }
 
 .images {
+
+
     width: 45%;
     height: 70%;
     position: absolute;
@@ -97,7 +116,6 @@ image {
 }
 
 .images img {
-
     height: 600px;
     width: 500px;
     left: 50%;
@@ -112,5 +130,5 @@ image {
 }
 
 .images:hover .boy {
-    left: 45%;
+    left: 40%;
 }

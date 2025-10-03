@@ -26,14 +26,16 @@ nav {
     width: 95%;
     /* margin: auto; */
     gap: 2rem;
-    padding: 20px ;
+    padding: 20px;
     align-items: center;
     justify-content: space-between;
     z-index: 5;
 }
-nav img{
-    position:relative;
+
+nav img {
+    position: relative;
 }
+
 nav ul li {
     display: inline-block;
     list-style: none;
@@ -51,14 +53,14 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #38bdf8;
-    text-shadow: 0 0 10px  #38bdf8;
+    text-shadow: 0 0 10px #38bdf8;
 }
 
 .btn {
     display: flex;
 }
 
-.buttons{
+.buttons {
     padding: 0.5rem 1.5rem;
     border-radius: 30px;
     font-weight: 600;
@@ -71,17 +73,18 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.buttons:hover{
+.buttons:hover {
     background: #0aa9f3;
-    box-shadow: 0 0 15px #0aa9f3 ;
+    box-shadow: 0 0 15px #0aa9f3;
 }
 
 
-.hero-content{
+.hero-content {
     display: flex;
     flex-basis: 50%;
     flex-grow: 1;
 }
+
 .detel {
     position: absolute;
     flex-wrap: wrap;
@@ -113,75 +116,72 @@ span {
 }
 
 
-/* for button */
- .tag-box{
-    position: relative;
-    width: 18rem;
-    height: 2.5rem;
-    border-radius: 50px;
-    background:linear-gradient(to left ,#00c3ff, 
-    #4d0199,
-    #6300c6,
-    #009dcd);
-    background-size: 200%;
-    animation: animationGradient 2s linear infinite;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+/* button */
+.btns {
+  margin: 100px;
+  padding: 15px 40px;
+  border: none;
+  outline: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+.btns::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+/* glow */
+.btns::before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #FF0000, #FF7300, #FFFB00, #48FF00,
+    #00FFD5, #002BFF, #FF00C8, #FF0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height:  calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
 }
 
-@keyframes animationGradient {
-    to {
-        background-position: 200% ;
-    }
-    
+@keyframes glowing {
+  0% {background-position: 0 0;}
+  50% {background-position: 400% 0;}
+  100% {background-position: 0 0;}
 }
 
- .tag-box .tag{
-    position: absolute;
-    inset: 3px 3px 3px 3px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.05s ease;
-    cursor: pointer;
+/* hover */
+.btns:hover::before {
+  opacity: 1;
 }
 
-
-
-.tag-box .tag:hover{
-    color:#0aa9f3;
+.btns:active:after {
+  background: transparent;
 }
 
-.tag-box .tag a {
-    color: black;
-}
-
-.tag-box .tag a:link {
-  color: #1E88E5; /* normal link (blue) */
-}
-
-.tag-box .tag a:visited {
-  color: bal; /* visited link (purple) */
-}
-
-.tag-box .tag a:hover {
-  color: #E53935; /* hover (red) */
-}
-
-.tag-box .tag a:active {
-  color: #43A047; /* active/clicking (green) */
+.btns:active {
+  color: #000;
+  font-weight: bold;
 }
 
 
-image {
-    width: 45%;
-    height: 80%;
-    object-fit: cover;
-    position: absolute;
-    bottom: 0%;
-    right: 100px;
-}
 
 .images {
 
